@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>散列算法</title>
+      <link href="/2023/03/24/san-lie-suan-fa/"/>
+      <url>/2023/03/24/san-lie-suan-fa/</url>
+      
+        <content type="html"><![CDATA[<h1 id="散列"><a href="#散列" class="headerlink" title="散列"></a>散列</h1><p>散列（Hash）也称为哈希，就是把任意长度的输入，通过散列算法，变换成固定长度的输出，这个输出值就是散列值。 </p><h1 id="散列算法"><a href="#散列算法" class="headerlink" title="散列算法"></a>散列算法</h1><p>在实际使用中，不同的输入可能会散列成相同的输出，这时也就产生了冲突。 这时候，我们就希望有一些算法可以保证散列表的足够散列程度，降低冲突几率。</p><p>散列算法的宗旨就是：构造冲突较低的散列地址，保证散列表中数据的离散度。</p><h2 id="除法散列法"><a href="#除法散列法" class="headerlink" title="除法散列法"></a>除法散列法</h2><p>散列长度 m, 对于一个小于 m 的数 p 取模，所得结果为散列地址。对 p 的选择很重要，一般取素数或 m</p><pre class="line-numbers language-none"><code class="language-none">f(k) &#x3D; k % p （p&lt;&#x3D;m）<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>因为求模数其实是通过一个除法运算得到的，所以叫“除法散列法”</p><h2 id="平方散列法（平方取中法）"><a href="#平方散列法（平方取中法）" class="headerlink" title="平方散列法（平方取中法）"></a>平方散列法（平方取中法）</h2><p>先通过求关键字的平方值扩大相近数的差别，然后根据表长度取中间的几位数作为散列函数值。又因为一个乘积的中间几位数和乘数的每一位都相关，所以由此产生的散列地址较为均匀。</p><pre class="line-numbers language-none"><code class="language-none">公式：f(k) &#x3D; ((k * k) &gt;&gt; X) &lt;&lt; Y对于常见的32位整数而言，也就是 f(k) &#x3D; (k * k) &gt;&gt; 28<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><h2 id="随机数法"><a href="#随机数法" class="headerlink" title="随机数法"></a>随机数法</h2><p>选择一随机函数，取关键字的随机值作为散列地址，通常用于关键字长度不同的场合。</p><pre class="line-numbers language-none"><code class="language-none">公式：f(k) &#x3D; random(k)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="斐波那契（Fibonacci）散列法"><a href="#斐波那契（Fibonacci）散列法" class="headerlink" title="斐波那契（Fibonacci）散列法"></a>斐波那契（Fibonacci）散列法</h2><p>当我们查看 ThreadLocal 执行设置元素时，有这么一段计算哈希值的代码；</p><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token keyword">int</span> <span class="token constant">HASH_INCREMENT</span> <span class="token operator">=</span> <span class="token number">0x61c88647</span><span class="token punctuation">;</span><span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">int</span> <span class="token function">nextHashCode</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>    <span class="token keyword">return</span> nextHashCode<span class="token punctuation">.</span><span class="token function">getAndAdd</span><span class="token punctuation">(</span><span class="token constant">HASH_INCREMENT</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>ThreadLocal 使用的就是 斐波那契（Fibonacci）散列法 + 开放寻址法存储数据到数组结构中。之所以使用斐波那契数列，是为了让数据更加散列，减少哈希碰撞。具体来自数学公式的计算求值。<br>公式：</p><pre class="line-numbers language-none"><code class="language-none">f(k) &#x3D; ((k * 2654435769) &gt;&gt; X) &lt;&lt; Y对于常见的32位整数而言，也就是 f(k) &#x3D; (k * 2654435769) &gt;&gt; 28<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><h3 id="todo"><a href="#todo" class="headerlink" title="todo"></a>todo</h3><p>通过数据对散列程度进行比对</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> coding </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>红米AX5路由器开启ssh+uu加速器插件</title>
       <link href="/2023/03/23/hong-mi-ax5-lu-you-qi-kai-qi-ssh-uu-jia-su-qi-cha-jian/"/>
       <url>/2023/03/23/hong-mi-ax5-lu-you-qi-kai-qi-ssh-uu-jia-su-qi-cha-jian/</url>
