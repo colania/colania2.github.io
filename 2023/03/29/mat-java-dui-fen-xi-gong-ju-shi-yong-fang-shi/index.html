@@ -4,9 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="散列算法, colania,java，golang，生活">
-    <meta name="description" content="散列散列（Hash）也称为哈希，就是把任意长度的输入，通过散列算法，变换成固定长度的输出，这个输出值就是散列值。 
-散列算法在实际使用中，不同的输入可能会散列成相同的输出，这时也就产生了冲突。 这时候，我们就希望有一些算法可以保证散列表的足">
+    <meta name="keywords" content="MAT(Java堆分析工具)使用方式, colania,java，golang，生活">
+    <meta name="description" content="MAT(Java堆分析工具)使用方式最近在整理笔记，发现之前在分析JAVA内存问题时写的Mat工具文档还是蛮清晰的，现重新整理一下，分享出来。
+MAT是个啥MAT 全称 Eclipse Memory Analysis Tools 是一个分析">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -18,7 +18,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>散列算法 | Ocean Pig Blog</title>
+    <title>MAT(Java堆分析工具)使用方式 | Ocean Pig Blog</title>
     <link rel="icon" type="image/png" href="/medias/logo3.png">
     
 
@@ -334,12 +334,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">散列算法</h1>
+                    <h1 class="description center-align post-title">MAT(Java堆分析工具)使用方式</h1>
                 </div>
             </div>
         </div>
@@ -361,9 +361,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/java/">
+                                <span class="chip bg-color">java</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -384,14 +388,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-03-24
+                    2023-03-29
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-03-27
+                    2023-03-29
                 </div>
                 
 
@@ -413,29 +417,91 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="散列"><a href="#散列" class="headerlink" title="散列"></a>散列</h1><p>散列（Hash）也称为哈希，就是把任意长度的输入，通过散列算法，变换成固定长度的输出，这个输出值就是散列值。 </p>
-<h1 id="散列算法"><a href="#散列算法" class="headerlink" title="散列算法"></a>散列算法</h1><p>在实际使用中，不同的输入可能会散列成相同的输出，这时也就产生了冲突。 这时候，我们就希望有一些算法可以保证散列表的足够散列程度，降低冲突几率。</p>
-<p>散列算法的宗旨就是：构造冲突较低的散列地址，保证散列表中数据的离散度。</p>
-<h2 id="除法散列法"><a href="#除法散列法" class="headerlink" title="除法散列法"></a>除法散列法</h2><p>散列长度 m, 对于一个小于 m 的数 p 取模，所得结果为散列地址。对 p 的选择很重要，一般取素数或 m</p>
-<pre class="line-numbers language-none"><code class="language-none">f(k) &#x3D; k % p （p&lt;&#x3D;m）<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>因为求模数其实是通过一个除法运算得到的，所以叫“除法散列法”</p>
-<h2 id="平方散列法（平方取中法）"><a href="#平方散列法（平方取中法）" class="headerlink" title="平方散列法（平方取中法）"></a>平方散列法（平方取中法）</h2><p>先通过求关键字的平方值扩大相近数的差别，然后根据表长度取中间的几位数作为散列函数值。又因为一个乘积的中间几位数和乘数的每一位都相关，所以由此产生的散列地址较为均匀。</p>
-<pre class="line-numbers language-none"><code class="language-none">公式：f(k) &#x3D; ((k * k) &gt;&gt; X) &lt;&lt; Y
-对于常见的32位整数而言，也就是 f(k) &#x3D; (k * k) &gt;&gt; 28<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<h2 id="随机数法"><a href="#随机数法" class="headerlink" title="随机数法"></a>随机数法</h2><p>选择一随机函数，取关键字的随机值作为散列地址，通常用于关键字长度不同的场合。</p>
-<pre class="line-numbers language-none"><code class="language-none">公式：f(k) &#x3D; random(k)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+                <h1 id="MAT-Java堆分析工具-使用方式"><a href="#MAT-Java堆分析工具-使用方式" class="headerlink" title="MAT(Java堆分析工具)使用方式"></a>MAT(Java堆分析工具)使用方式</h1><p>最近在整理笔记，发现之前在分析JAVA内存问题时写的Mat工具文档还是蛮清晰的，现重新整理一下，分享出来。</p>
+<h2 id="MAT是个啥"><a href="#MAT是个啥" class="headerlink" title="MAT是个啥"></a>MAT是个啥</h2><p>MAT 全称 <code>Eclipse Memory Analysis Tools</code> 是一个分析 Java堆数据的专业工具，可以计算出内存中对象的实例数量、占用空间大小、引用关系等，看看是谁阻止了垃圾收集器的回收工作，从而定位内存泄漏的原因。</p>
+<h2 id="什么时候会用到"><a href="#什么时候会用到" class="headerlink" title="什么时候会用到"></a>什么时候会用到</h2><ul>
+<li>OutOfMemoryError的时候，触发full gc，但空间却回收不了，引发内存泄露</li>
+<li>java服务器系统异常，比如load飙高，io异常，或者线程死锁等，都可能通过分析堆中的内存对象来定位原因</li>
+</ul>
+<h2 id="怎么安装"><a href="#怎么安装" class="headerlink" title="怎么安装"></a>怎么安装</h2><p><a target="_blank" rel="noopener" href="https://www.eclipse.org/mat/downloads.php">MAT最新下载版本</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.eclipse.org/mat/previousReleases.php">MAT历史版本</a></p>
+<p>比较重要的是MAT的版本是和JAVA版本有关的，如果下载的话，需要考虑是否支持本地的 JAVA 版本 。</p>
+<p>我用的是MAC  Intel 版本，所以下载的是 <code>MemoryAnalyzer-1.12.0.20210602-macosx.cocoa.x86_64</code> 。当前最新的 <code>Memory Analyzer 1.14.0 Release</code> 需要Java 17+。</p>
+<p><img src="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/image-20230329152800939.png" alt="image-20230329152800939"></p>
+<h2 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h2><p>首先，MAT是用来分析JAVA堆数据的专业工具，那如何才能获取到JAVA堆数据呢。</p>
+<h3 id="分析文件生成方式"><a href="#分析文件生成方式" class="headerlink" title="分析文件生成方式"></a>分析文件生成方式</h3><ol>
+<li>自动生成，jvm启动参数里添加下面配置，当发生OutOfMemoryError时，虚拟机会自动dump内存快照</li>
+</ol>
+<pre class="line-numbers language-none"><code class="language-none">-XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath&#x3D;$LOG_DIR&#x2F;java.hprof&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<h2 id="斐波那契（Fibonacci）散列法"><a href="#斐波那契（Fibonacci）散列法" class="headerlink" title="斐波那契（Fibonacci）散列法"></a>斐波那契（Fibonacci）散列法</h2><p>当我们查看 ThreadLocal 执行设置元素时，有这么一段计算哈希值的代码；</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token keyword">int</span> <span class="token constant">HASH_INCREMENT</span> <span class="token operator">=</span> <span class="token number">0x61c88647</span><span class="token punctuation">;</span>
+<ol start="2">
+<li>手动生成，通过执行jdk自带命令</li>
+</ol>
+<pre class="line-numbers language-none"><code class="language-none">jmap -dump:format&#x3D;b,file&#x3D;heap.bin  &lt;pid&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">int</span> <span class="token function">nextHashCode</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-    <span class="token keyword">return</span> nextHashCode<span class="token punctuation">.</span><span class="token function">getAndAdd</span><span class="token punctuation">(</span><span class="token constant">HASH_INCREMENT</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>ThreadLocal 使用的就是 斐波那契（Fibonacci）散列法 + 开放寻址法存储数据到数组结构中。之所以使用斐波那契数列，是为了让数据更加散列，减少哈希碰撞。具体来自数学公式的计算求值。<br>公式：</p>
-<pre class="line-numbers language-none"><code class="language-none">f(k) &#x3D; ((k * 2654435769) &gt;&gt; X) &lt;&lt; Y
-对于常见的32位整数而言，也就是 f(k) &#x3D; (k * 2654435769) &gt;&gt; 28<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<ol start="3">
+<li>Arthas heapdump命令</li>
+</ol>
+<pre class="line-numbers language-none"><code class="language-none">heapdump xxxxxx.hprof<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<h3 id="todo"><a href="#todo" class="headerlink" title="todo"></a>todo</h3><p>通过数据对散列程度进行比对</p>
+<p>接下就可以用 MAT打开转换后的.hprof文件</p>
+<p><strong><span style='color:red'>（！我这里只是介绍使用方式，并不是arthas有问题，这个dump文件只是随手生成的一份）</span></strong></p>
+<h3 id="使用MAT"><a href="#使用MAT" class="headerlink" title="使用MAT"></a>使用MAT</h3><p>打开后的首页，里面是一些堆的基本概要信息，比如空间大小、类的数量、对象实例数量、类加载器等等</p>
+<p><img src="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/image-20230329153514976.png" alt="image-20230329153514976"></p>
+<h2 id="MAT功能"><a href="#MAT功能" class="headerlink" title="MAT功能"></a>MAT功能</h2><p>MAT的核心功能有三类：</p>
+<ul>
+<li>Actions：<ul>
+<li><strong>Histogram 列出每个类所对应的对象个数，以及所占用的内存大小；</strong></li>
+<li><strong>Dominator Tree 以占用总内存的百分比的方式来列举出所有的实例对象，注意这个地方是直接列举出的对应的对象而不是类，这个视图是用来发现大内存对象的</strong></li>
+<li>Top Consumers：按照类和包分组的方式展示出占用内存最大的一个对象</li>
+<li>Duplicate Classes：检测由多个类加载器所加载的类信息（用来查找重复的类）</li>
+</ul>
+</li>
+<li>Reports：<ul>
+<li><strong>Leak Suspects：通过MAT自动分析当前内存泄露的主要原因</strong></li>
+<li>Top Components：Top组件，列出大于总堆1%的组件的报告</li>
+</ul>
+</li>
+<li>Step By Step：<ul>
+<li>Component Report：组件报告,分析属于公共根包或类加载器的对象；</li>
+</ul>
+</li>
+</ul>
+<p>下面列举一些会用到的功能。</p>
+<h3 id="Histogram"><a href="#Histogram" class="headerlink" title="Histogram"></a>Histogram</h3><p>列出每个类所对应的对象个数，以及所占用的内存大小。</p>
+<p>选中一个ClassName单击后，通过左上角Inspector可以看到当前类的回收情况，内存地址，等</p>
+<p><img src="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/image-20230329154124926.png" alt="image-20230329154124926"></p>
+<h3 id="Dominator-Tree"><a href="#Dominator-Tree" class="headerlink" title="Dominator Tree"></a>Dominator Tree</h3><p>以占用总内存的百分比的方式来列举出所有的实例对象，注意这个地方是直接列举出的对应的对象而不是类，这个视图是用来发现大内存对象的</p>
+<ul>
+<li><p>通过<code>Dominator Tree</code> 可以轻松看到那些对象占据了大量堆空间，也就可以断定，当前问题出自于哪个对象。</p>
+</li>
+<li><p>再根据该对象的生成方式，去判断出问题的代码在哪里。</p>
+</li>
+</ul>
+<p><img src="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/image-20230329154234980.png" alt="image-20230329154234980"></p>
+<p>由上图可看到<code>com.taobao.arthas.core.server.ArthasBootstrap @ 0x7ba601258</code>占用了32.97%的内存</p>
+<p><strong>那么当我们需要查看，当前该ArthasBootstrap @ 0x7ba601258对象都引用了那些数据，以及当前该对象是被那几个对象所引用的，如何查看？</strong></p>
+<p>在当前所要查看的对象右键，点击List Objects可以看到分别提供了：<code>with outgoing references（查看当前该对象的所有的引用信息）</code> 和 <code>with incoming references（查看当前该对象是被那几个对象所引用的）</code> ；</p>
+<p><img src="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/image-20230329154846899.png" alt="image-20230329154846899"></p>
+<p>快速找出某个实例没被释放的原因，可以右健 Path to GC Roots–&gt;exclude all phantom&#x2F;weak&#x2F;soft etc. references</p>
+<p><img src="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/image-20230329155941552.png" alt="image-20230329155941552"></p>
+<h3 id="Leak-Suspects"><a href="#Leak-Suspects" class="headerlink" title="Leak Suspects"></a>Leak Suspects</h3><p>通过MAT自动分析当前内存问题的主要原因</p>
+<p><img src="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/image-20230329154945313.png" alt="image-20230329154945313"></p>
+<p>可以看到，当前给出的主要原因是：<code>**com.taobao.arthas.core.server.ArthasBootstrap**</code> 实例占据<strong>8,392,160 (32.97%)</strong> bytes ， 是由<code> **com.taobao.arthas.agent.ArthasClassloader @ 0x7ba556870**</code>加载的。</p>
+<p>还给出了关键字：</p>
+<p><strong>Keywords</strong></p>
+<ul>
+<li>com.taobao.arthas.core.server.ArthasBootstrap</li>
+<li>com.taobao.arthas.agent.ArthasClassloader @ 0x7ba556870</li>
+<li>com.taobao.arthas.core.shell.term.impl.http.api.HttpApiHandler</li>
+</ul>
+<p>点击detail的话，会有更详细的内容</p>
+<p><img src="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/image-20230329155356140.png" alt="image-20230329155356140"></p>
+<p><img src="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/image-20230329155424428.png" alt="image-20230329155424428"></p>
+<h3 id="Thread-Overview"><a href="#Thread-Overview" class="headerlink" title="Thread_Overview"></a>Thread_Overview</h3><p>用来查看当前进程dump时的所有线程的堆栈信息，通过分析下面所对应的堆栈信息，可以很快速的定位到对应的线程所执行的方法等层级关系，以此来定位对应的异常问题；</p>
+<p><img src="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/image-20230329155550728.png" alt="image-20230329155550728"></p>
+<h3 id="Heap-Dump-Overview"><a href="#Heap-Dump-Overview" class="headerlink" title="Heap Dump Overview"></a>Heap Dump Overview</h3><p>查看全局的内存占用信息</p>
+<p><img src="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/image-20230329155637605.png" alt="image-20230329155637605"></p>
 
                 
             </div>
@@ -449,7 +515,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/java/">
+                                    <span class="chip bg-color">java</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -490,9 +560,60 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2023/03/29/mat-java-dui-fen-xi-gong-ju-shi-yong-fang-shi/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="MAT(Java堆分析工具)使用方式">
+                        
+                        <span class="card-title">MAT(Java堆分析工具)使用方式</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-03-29
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/coding/" class="post-category">
+                                    coding
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/java/">
+                        <span class="chip bg-color">java</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2023/03/24/ru-he-gao-xiao-kai-hui/">
                     <div class="card-image">
@@ -510,9 +631,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-03-24
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-03-24
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -524,55 +645,6 @@
                             
                         </span>
                     </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2023/03/23/hong-mi-ax5-lu-you-qi-kai-qi-ssh-uu-jia-su-qi-cha-jian/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="红米AX5路由器开启ssh+uu加速器插件">
-                        
-                        <span class="card-title">红米AX5路由器开启ssh+uu加速器插件</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-03-23
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E6%90%9E%E6%9C%BA/" class="post-category">
-                                    搞机
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/">
-                        <span class="chip bg-color">科学上网</span>
-                    </a>
-                    
                 </div>
                 
             </div>
