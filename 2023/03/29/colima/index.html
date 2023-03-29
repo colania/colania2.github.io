@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="分类: 行业追踪, colania,java，golang，生活">
-    <meta name="description" content="Colania的个人博客，主要涉及到编程（Java，Python，Linux等）、个人提升学习，以及日常生活分享">
+    <meta name="keywords" content="colima, colania,java，golang，生活">
+    <meta name="description" content="Docker Colima 在mac 上，要运行docker ，需要通过docker desktop 创建docker运行的环境，但是这玩意太重了，风扇总是飞起。于是找到了一个代替docker desktop的轻量级工具，缺点是没有可视化界">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>分类: 行业追踪 | Ocean Pig Blog</title>
+    <title>colima | Ocean Pig Blog</title>
     <link rel="icon" type="image/png" href="/medias/logo3.png">
     
 
@@ -329,172 +329,406 @@
 
 </header>
 
-    <div class="bg-cover pd-header about-cover">
-    <div class="container">
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">colima</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
     <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                求知若渴，虚怀若谷
-                
-            </div>
-
-            <div class="description center-align">
-                
-                <span id="subtitle"></span>
-                <script src="/libs/typed/typed.js"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: [ 
-                            
-                                "从来没有真正的绝境, 只有心灵的迷途",
-                            
-                                "Never really desperate, only the lost of the soul",
-                            
-                        ],
-                        startDelay: 300,
-                        typeSpeed: 100,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
-                    });
-                </script>
-                
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<script>
-    $('.bg-cover').css('background-image', 'url(/medias/banner/0.jpg)');
-</script>
-
-
-    </div>
-</div>
-
-<main class="content">
-
-    
-
-<div id="category-cloud" class="container chip-container">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
     <div class="card">
-        <div class="card-content">
-            <div class="tag-title center-align">
-                <i class="fas fa-bookmark"></i>&nbsp;&nbsp;文章分类
-            </div>
-            <div class="tag-chips">
-                
-                
-                
-                <a href="/categories/%E8%A1%8C%E4%B8%9A%E8%BF%BD%E8%B8%AA/" title="行业追踪: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-active "
-                            style="background-color: #F9EBEA;">行业追踪
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/coding/" title="coding: 6">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #F5EEF8;">coding
-                        <span class="tag-length">6</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/java/" title="java: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #D5F5E3;">java
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/%E5%B7%A5%E4%BD%9C%E5%BF%83%E5%BE%97/" title="工作心得: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #E8F8F5;">工作心得
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/%E6%90%9E%E6%9C%BA/" title="搞机: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #FEF9E7;">搞机
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-            </div>
-        </div>
-    </div>
-</div>
-
-
-    
-
-    <article id="articles" class="container articles">
-        <div class="row tags-posts">
-            
-            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2023/03/18/ai-gong-ju/">
-                        <div class="card-image tag-image">
-                            
-                            
-                            <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="AI工具介绍">
-                            
-                            <span class="card-title">AI工具介绍</span>
-                        </div>
-                    </a>
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                AI工具介绍随着当前网络数据量的爆发，基于大数据的AI，现在越来越智能了。尤其是chatgpt的推出，AI使用越来越广泛。
-本文主要介绍当前广泛使用的AI工具。
-chatGPTChatGPT是一种基于Transformer架构的深度学习模型
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-03-18
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E8%A1%8C%E4%B8%9A%E8%BF%BD%E8%B8%AA/" class="post-category">
-                                    行业追踪
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
                     
-                    <div class="card-action article-tags">
+                    <div class="article-tag">
                         
-                        <a href="/tags/AI/">
-                            <span class="chip bg-color">AI</span>
-                        </a>
+                            <a href="/tags/tools/">
+                                <span class="chip bg-color">tools</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/coding/" class="post-category">
+                                coding
+                            </a>
                         
                     </div>
                     
                 </div>
             </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2023-03-29
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2023-03-29
+                </div>
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="Docker-Colima"><a href="#Docker-Colima" class="headerlink" title="Docker Colima"></a>Docker Colima</h1><p> 在mac 上，要运行docker ，需要通过docker desktop 创建docker运行的环境，但是这玩意太重了，风扇总是飞起。于是找到了一个代替docker desktop的轻量级工具，缺点是没有可视化界面。</p>
+<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p><a target="_blank" rel="noopener" href="https://github.com/abiosoft/colima">Colima</a> 是一个以最小化设置来在MacOS上运行容器运行时和 Kubernetes 的工具。</p>
+<p>Colima 的名字取自 Container on Lima。<a target="_blank" rel="noopener" href="https://github.com/lima-vm/lima">Lima</a> 是一个虚拟机工具，可以实现自动的文件共享、端口转发以及 containerd。</p>
+<p>Colima 实际上是通过 Lima 启动了名为 colima 的虚拟机，使用虚拟机中的 containerd 作为容器运行时。</p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>Colima 的使用很简单，执行下面的命令就可以创建虚拟机，默认是 Docker 的运行时。</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">colima start
+<span class="token constant">INFO</span><span class="token punctuation">[</span><span class="token number">0000</span><span class="token punctuation">]</span> starting colima
+<span class="token constant">INFO</span><span class="token punctuation">[</span><span class="token number">0000</span><span class="token punctuation">]</span> creating and starting <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>                     context<span class="token operator">=</span>vm
+<span class="token constant">INFO</span><span class="token punctuation">[</span><span class="token number">0119</span><span class="token punctuation">]</span> provisioning <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>                              context<span class="token operator">=</span>docker
+<span class="token constant">INFO</span><span class="token punctuation">[</span><span class="token number">0119</span><span class="token punctuation">]</span> provisioning in <span class="token constant">VM</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>                        context<span class="token operator">=</span>docker
+<span class="token constant">INFO</span><span class="token punctuation">[</span><span class="token number">0133</span><span class="token punctuation">]</span> restarting <span class="token constant">VM</span> <span class="token keyword">to</span> <span class="token namespace">complete</span> setup <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>           context<span class="token operator">=</span>docker
+<span class="token constant">INFO</span><span class="token punctuation">[</span><span class="token number">0133</span><span class="token punctuation">]</span> stopping <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>                                  context<span class="token operator">=</span>vm
+<span class="token constant">INFO</span><span class="token punctuation">[</span><span class="token number">0136</span><span class="token punctuation">]</span> starting <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>                                  context<span class="token operator">=</span>vm
+<span class="token constant">INFO</span><span class="token punctuation">[</span><span class="token number">0158</span><span class="token punctuation">]</span> starting <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>                                  context<span class="token operator">=</span>docker
+<span class="token constant">INFO</span><span class="token punctuation">[</span><span class="token number">0159</span><span class="token punctuation">]</span> done<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>此时，在宿主机上就可以使用 Docker 相关的命令了</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">docker ps
+<span class="token constant">CONTAINER</span> <span class="token constant">ID</span>   <span class="token constant">IMAGE</span>     <span class="token constant">COMMAND</span>   <span class="token constant">CREATED</span>   <span class="token constant">STATUS</span>    <span class="token constant">PORTS</span>     <span class="token constant">NAMES</span>
+
+docker pull busybox
+
+docker images
+<span class="token constant">REPOSITORY</span>   <span class="token constant">TAG</span>       <span class="token constant">IMAGE</span> <span class="token constant">ID</span>       <span class="token constant">CREATED</span>       <span class="token constant">SIZE</span>
+busybox      latest    b34806a1af7a   <span class="token number">2</span> weeks ago   <span class="token number">1.41</span><span class="token constant">MB</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>也可以使用 Lima 的命令行 limact工具查看虚拟机的情况</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">limactl list
+<span class="token constant">NAME</span>      <span class="token constant">STATUS</span>     <span class="token constant">SSH</span>                <span class="token constant">ARCH</span>       <span class="token constant">CPUS</span>    <span class="token constant">MEMORY</span>    <span class="token constant">DISK</span>     <span class="token constant">DIR</span>
+colima    <span class="token class-name">Running</span>    <span class="token number">127.0</span><span class="token number">.0</span><span class="token number">.1</span><span class="token operator">:</span><span class="token number">64505</span>    aarch64    <span class="token number">2</span>       <span class="token number">2</span>GiB      <span class="token number">60</span>GiB    <span class="token operator">/</span><span class="token class-name">Users</span><span class="token operator">/</span>addo<span class="token operator">/</span><span class="token punctuation">.</span>lima<span class="token operator">/</span>colima<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="虚拟机配置"><a href="#虚拟机配置" class="headerlink" title="虚拟机配置"></a>虚拟机配置</h2><p>Colima 启动的虚拟机默认是 2CPU、2GiB 内存 和 60GiB 存储。可以在创建时通过 –cpu 、–memory 和 –disk 来分配更多资源。</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">colima start <span class="token operator">--</span>cpu <span class="token number">4</span> <span class="token operator">--</span>memory <span class="token number">16</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>也可以修改当前虚拟机的配置：</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">colima stop
+colima start <span class="token operator">--</span>cpu <span class="token number">4</span> <span class="token operator">--</span>memory <span class="token number">16</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>当然colima除了docker也是支持containerd的</p>
+<p>在此之前先删除原来生成的虚拟机</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">colima stop
+colima delete<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>之后创建新的虚拟机</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">colima start <span class="token operator">--</span>runtime containerd<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>创建完成之后查看容器</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">colima nerdctl ps<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>或者运行一个容器</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">colima nerdctl container run nginx<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>除了containerd colima还支持创建k8s</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">colima start <span class="token operator">--</span><span class="token keyword">with</span><span class="token operator">-</span>kubernetes<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>支持自定义虚拟机大小</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">colima start <span class="token operator">--</span>cpu <span class="token number">4</span> <span class="token operator">--</span>memory <span class="token number">16</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+                
+            </div>
+            <hr/>
+
+            
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/tools/">
+                                    <span class="chip bg-color">tools</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
             
         </div>
-    </article>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2023/03/29/colima/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="colima">
+                        
+                        <span class="card-title">colima</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-03-29
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/coding/" class="post-category">
+                                    coding
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/tools/">
+                        <span class="chip bg-color">tools</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2023/03/29/java/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="java">
+                        
+                        <span class="card-title">java</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-03-29
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            WWEI
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
 </main>
 
 
