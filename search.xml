@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>自行更换Macbook Pro A1708电池</title>
+      <link href="/2023/03/31/zi-xing-geng-huan-macbookproa1708-dian-chi/"/>
+      <url>/2023/03/31/zi-xing-geng-huan-macbookproa1708-dian-chi/</url>
+      
+        <content type="html"><![CDATA[<h2 id="基本流程"><a href="#基本流程" class="headerlink" title="基本流程"></a>基本流程</h2><p>本来想去实体店换的，去了以后说要键盘和电池要一起换，太贵了。而且换电池要小半个月。作为日常的主力机，经不住这么久的耗时。还是自己去某宝买电池，自己换吧。总体来说还是相对容易的。</p><p>这个安装本来是从网上找到的，后来又找了一下，没找到相关文档了。。。现在发出来，方便后续再看。</p><p>网上找了一下 MacBook Pro (A1708) 换电池的视频，大多是引导把触摸板拆掉再铲电池，有的甚至是要把主板拆掉再铲电池，可能是考虑到电池底部的胶条实在太难铲除，担心下铲的时候把 触摸板FPC 或者其他元件碰坏所以才做进一步拆除，我是在基本没有拆除其他附件的情况情况下单换了电池。</p><h3 id="大致流程"><a href="#大致流程" class="headerlink" title="大致流程"></a>大致流程</h3><blockquote><p>拆开后盖-&gt;解下触摸板接口-&gt;拆除电池控制板-&gt;铲除电池底部胶条-&gt;拆除原电池-&gt;安放新电池-&gt;接上电池控制板-&gt;安装触摸板接口-&gt;安装后盖。</p></blockquote><p>初次拆这款机器可能的难点应该在打开后盖、铲除电池底部胶条这两步，要特别小心的是拆除电池控制板的FPC，毕竟FPC很细接口卡扣又非常小，详细步骤和要点记录如下。</p><h2 id="详细步骤"><a href="#详细步骤" class="headerlink" title="详细步骤"></a>详细步骤</h2><h3 id="1-拆开后盖"><a href="#1-拆开后盖" class="headerlink" title="1. 拆开后盖"></a>1. 拆开后盖</h3><p>初次拆这款机器可能第一个难关就是打开后盖，后盖有6颗螺丝，两两一组，用的是统一号梅花螺丝刀，对应的位置和螺丝的形状如下图。</p><p><img src="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/1665988108353-ef1e1c97-18d4-470d-9f92-3b2d047900f4.png" alt="img"></p><p>6颗螺丝取下来之后，保存好，小心掉了。用拨片（或者银行卡这种小卡片更容易塞进去）从后方边撬开背面板，再以此将背板左右两侧的卡口打开，再稍用力向后抽出背板。</p><p><img src="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/1665988108719-5b8ab353-5f89-4fcf-a654-bd6de1f6a744.png" alt="image.png"></p><p><img src="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/1665988107795-3a663c47-1bd5-42c9-81f5-8b155672e6bd.png" alt="image.png"></p><p>不出意外的话后盖就顺利打开了，接下来要取下触摸板接口上的排线，再来拆解电池控制板。</p><p><img src="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/1665988116599-7bd244f3-09b7-4073-9bab-bad988e60653.png" alt="img"></p><h3 id="2-解下触摸板接口"><a href="#2-解下触摸板接口" class="headerlink" title="2. 解下触摸板接口"></a>2. 解下触摸板接口</h3><p>取下触摸板接口上的螺丝和压扣之后可以轻松取下排线。</p><p><img src="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/1665988117552-4892924d-243f-4976-a4c3-76a7e1e0d415.png" alt="img"></p><p><img src="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/1665988117665-39633b5b-41da-4987-aedf-47ee507e6f6e.png" alt="image.png"></p><p>揭开上图中电池电源板上条形胶纸，露出电池的控制板，建议从做往右揭开条形胶纸，右边不小心容易把排线拔下来。</p><h3 id="3-拆除电池控制板连接"><a href="#3-拆除电池控制板连接" class="headerlink" title="3.  拆除电池控制板连接"></a>3.  拆除电池控制板连接</h3><p>拆除胶条纸之后，看到的排线就是电池与主板的连接线了。排线左右两端均有小插头和卡扣，要把小卡扣掰成竖直状态再将排线从插头中拔出来，后续装排线的时候先插进去再小卡扣掰下去卡住。</p><p><img src="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/1665988122442-5bdcae78-f4fe-4f5f-943f-50ce8a616014.png" alt="image.png"></p><p>取下主板与电池连接的排线之后，取下控制板上的3颗螺丝，中间那颗螺丝上有白色的纸片，应该是用来判断是否拆过电池的，无视或者取下就好。</p><p>搞定之后要开始重头戏，拆电芯了……</p><p><img src="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/1665988123521-0eac6eab-c653-4cb4-910a-f6f4be39ea3b.png" alt="image.png"></p><h3 id="4-铲除电池底部胶条"><a href="#4-铲除电池底部胶条" class="headerlink" title="4. 铲除电池底部胶条"></a>4. 铲除电池底部胶条</h3><p>原厂电池三块电芯的底部是用胶条粘在机器上的，胶条的粘性非常的好，三块电芯建议先铲两侧的，熟练了之后再来铲中间的。最好用电吹风热一下胶条，会容易撕一点。。。还记得第一次拆iPhone电池的时候硬掰，结果电池着火了。。。</p><p>先用铲子的一个胶切进去，根据胶条的位置顶进去，只要铲子顶进去开了小口，再不断扭动就很容易铲下来了。</p><p>铲中间电芯的时候要特别注意，从左右两侧空余量比较多的一侧入手，结合胶条的位置参照两侧的铲法入手横着铲，千万要避开下方触摸板的排线，一个不小弄坏排线就亏了……</p><p>把3颗电芯底部的胶条都铲开后很轻松的就可以取下旧电池。</p><h3 id="5-安装新电池"><a href="#5-安装新电池" class="headerlink" title="5.  安装新电池"></a>5.  安装新电池</h3><p>装电池就很容易了，后续就没图了，很简单。</p><p>排线左右两侧的卡扣一定要按拆的顺序反向操作，排线插入插座必须足够长，否则后续回认不到电池。安装好电池后可以尝试开机测试，能找到电池没问题了再压实电池再往后装回后盖。</p><h3 id="6-从后往前依次装回"><a href="#6-从后往前依次装回" class="headerlink" title="6. 从后往前依次装回"></a>6. 从后往前依次装回</h3><p>装回触摸板排线，反向操作安装回后盖。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 搞机 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 维修 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>colima</title>
       <link href="/2023/03/29/colima/"/>
       <url>/2023/03/29/colima/</url>
@@ -23,19 +48,6 @@
             <tag> tools </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>java</title>
-      <link href="/2023/03/29/java/"/>
-      <url>/2023/03/29/java/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
       
     </entry>
     
