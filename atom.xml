@@ -6,7 +6,7 @@
   <link href="https://colania.github.io/atom.xml" rel="self"/>
   
   <link href="https://colania.github.io/"/>
-  <updated>2023-04-01T16:26:01.019Z</updated>
+  <updated>2023-04-01T16:36:20.810Z</updated>
   <id>https://colania.github.io/</id>
   
   <author>
@@ -15,6 +15,53 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>代码CR模板</title>
+    <link href="https://colania.github.io/2023/04/02/dai-ma-cr-mo-ban/"/>
+    <id>https://colania.github.io/2023/04/02/dai-ma-cr-mo-ban/</id>
+    <published>2023-04-01T16:34:27.000Z</published>
+    <updated>2023-04-01T16:36:20.810Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="代码CR模板"><a href="#代码CR模板" class="headerlink" title="代码CR模板"></a>代码CR模板</h1><h2 id="基础篇"><a href="#基础篇" class="headerlink" title="基础篇"></a>基础篇</h2><ol><li><p>编码风格遵循阿里巴巴Java开发手册</p></li><li><p>大型复杂流程程序必须提供流程图、时序图</p><ol><li>被cr同学在cr开始需简单叙述项目大小及其背景，复杂流程需要cr实现逻辑是否match技术方案，减少实现跟技术方案的gap</li></ol></li><li><p>业务逻辑划分是否合理,是否耦合</p><ol><li>业务逻辑涉及领域的逻辑，明显或耦合的业务逻辑建议拆分</li></ol></li><li><p>代码编码逻辑是否清晰</p><ol><li>被cr同学需要讲清楚主干逻辑</li></ol></li><li><p>合理有效的注释</p><ol><li>逻辑复杂的代码或cr有疑问的逻辑,要求补充合理有效的注释</li></ol></li><li><p>是否存在冗余代码</p><ol><li>多余或者没有引用的代码建议删除</li></ol></li><li><p>是否存在潜在NPE</p><ol><li><blockquote><p>NPE是日常工作必出现的bug</p><p>上下文字段使用不判空，getXX()操作，基本类型拆箱，需要防御式判断或Optional</p></blockquote></li></ol></li><li><p>日志打印规范</p><ol><li><p>强制使用占位符进行日志打印，因为字符串拼接会使用 StringBuilder 的 append() 方式,有一定的性能损耗</p><blockquote><p>logger.info(“are u ok : oid 1”, oid);<br>logger.info(“are u ok : oid 1”, oid);</p></blockquote></li></ol></li><li><p>有没有maven依赖冲突</p><ul><li>很多时候诡异的运行时bug，往往由于依赖冲突导致，cr建议确认是否有pom变更</li></ul></li><li><p>资源释放</p><ul><li>无论是网络io还是文件io、资源释放的逻辑需要被cr到</li></ul></li><li><p>统一错误码</p><ul><li>禁止统一返回-1、500等错误码，最好定义枚举，方便追溯问题</li></ul></li><li><p>异常的处理</p><ul><li>出现异常的地方需要确认是否需要进行一下操作：直接返回、抛出异常、重试处理、恢复处理、熔断处理、降级处理、关闭业务</li></ul></li></ol><h2 id="初级篇"><a href="#初级篇" class="headerlink" title="初级篇"></a>初级篇</h2><ol><li>数据库索引设计是否合理、是否生效<ul><li>被cr同学要讲清楚设计索引的原因以及效果</li></ul></li><li>代码是否可以使用设计模式或者设计模式是否过度设计<ul><li>if&#x2F;else 过多或者场景分发类逻辑，建议采用策略模式</li><li>不建议小的需求、进行复杂的继承抽象逻辑，良好的设计是模型的合理</li><li>不建议引入复杂的框架解决简单问题，有些同学热衷于一个框架搞定所有架构(比如ddd cola)， 毕竟代码的历史性、复杂度框架是评估不了的、好的业务框架脚手架更倾向于用这种思想解决问题，而非照搬</li></ul></li><li>中间件使用是否最佳实践<ul><li>比如mq消费是否正确ack、还是需要重试、还是丢弃</li><li>比如redis是否存在大key设计、需要进行合理设计</li><li>比如es查询是否设置合理超时时间</li></ul></li><li>线程池使用、参数是否正确、是否业务隔离<ul><li>是否使用公司框架或jdk自带带参线程池构建方法</li><li>线程数、队列大小是否配置合理</li><li>多业务或调用方、是否配置隔离线程池</li></ul></li><li>如果使用锁，锁范围、粒度是否合适<ul><li>分布式锁的锁区间需要check是否影响其他</li></ul></li><li>事务处理：是否需要事务，事务是否生效<ul><li>持久化操作是否没有加事务</li><li>类内部调用是否导致事务没生效</li></ul></li></ol><h2 id="进阶篇"><a href="#进阶篇" class="headerlink" title="进阶篇"></a>进阶篇</h2><h3 id="性能优化"><a href="#性能优化" class="headerlink" title="性能优化"></a>性能优化</h3><ol><li>需要缓存的地方是否添加缓存<ul><li>比如依赖的外部接口性能差、添加合适的缓存解决查询问题</li></ul></li><li>乐观锁代替悲观锁</li><li>多接口聚合采用多线程加速</li></ol><h3 id="一致性"><a href="#一致性" class="headerlink" title="一致性"></a>一致性</h3><h3 id="幂等性"><a href="#幂等性" class="headerlink" title="幂等性"></a>幂等性</h3><ol><li>基于状态的幂等<ul><li>基于状态，也就是是说调用该接口，会导致状态变化，如果状态已经发生变化，那么就直接返回<br>之前的结果即可</li></ul></li><li>基于某个key的幂等<ul><li>通常使用单独的字段来绑定或者日志表来记录，如果存在，直接返回</li></ul></li></ol><h3 id="重试"><a href="#重试" class="headerlink" title="重试"></a>重试</h3><ol><li>接口调用失败重试<ol><li>存在写操作的的外部接口建议不重试、让外部重新发起请求如果需要发起重试、</li><li>check提供的接口支持幂等返回</li></ol></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;代码CR模板&quot;&gt;&lt;a href=&quot;#代码CR模板&quot; class=&quot;headerlink&quot; title=&quot;代码CR模板&quot;&gt;&lt;/a&gt;代码CR模板&lt;/h1&gt;&lt;h2 id=&quot;基础篇&quot;&gt;&lt;a href=&quot;#基础篇&quot; class=&quot;headerlink&quot; title=&quot;基础篇</summary>
+      
+    
+    
+    
+    <category term="工作心得" scheme="https://colania.github.io/categories/%E5%B7%A5%E4%BD%9C%E5%BF%83%E5%BE%97/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>技术方案模板</title>
+    <link href="https://colania.github.io/2023/04/02/ji-zhu-fang-an-mo-ban/"/>
+    <id>https://colania.github.io/2023/04/02/ji-zhu-fang-an-mo-ban/</id>
+    <published>2023-04-01T16:34:18.000Z</published>
+    <updated>2023-04-01T16:45:47.288Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="技术方案模板"><a href="#技术方案模板" class="headerlink" title="技术方案模板"></a>技术方案模板</h1><ul><li><p>一、需求背景</p><blockquote><p>讲一下需求背景、业务目标、业务流程、要解决的问题和方案、预估收益。</p></blockquote></li><li><p>二、功能框架</p></li><li><ul><li>2.1 功能框架</li></ul></li><li><blockquote><p>系统架构图</p></blockquote></li><li><ul><li>2.2 业务流程</li></ul></li><li><blockquote><p>数据流图</p></blockquote></li><li><ul><li>2.3 权限设计</li></ul></li><li><blockquote><p>是否涉及权限管理或者其他数据权限</p></blockquote></li><li><ul><li>2.4 系统交互</li></ul></li><li><blockquote><p>与其他业务系统或三方的交互</p></blockquote></li><li><p>三、需求拆解</p></li><li><ul><li>3.1 功能A</li></ul></li><li><ul><li><ul><li>3.1.1 生命周期</li><li>3.1.2 状态机</li><li>3.1.3 实现细节方案</li></ul></li></ul></li><li></li><li><p>四、技术方案</p></li><li><ul><li><p>4.1 外部依赖和业务模块设计</p></li><li><p>4.2 总体架构设计</p></li><li><p>4.3 总体流程设计</p></li><li><p>4.4 系统稳定性设计</p><blockquote><p>容错、扩容、监控、报警等信息</p></blockquote></li></ul></li><li><p>五、数据模型设计</p><blockquote><p>数据ER图</p></blockquote></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;技术方案模板&quot;&gt;&lt;a href=&quot;#技术方案模板&quot; class=&quot;headerlink&quot; title=&quot;技术方案模板&quot;&gt;&lt;/a&gt;技术方案模板&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;一、需求背景&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;讲一下需求背景、业务目标、业务流程、</summary>
+      
+    
+    
+    
+    <category term="工作心得" scheme="https://colania.github.io/categories/%E5%B7%A5%E4%BD%9C%E5%BF%83%E5%BE%97/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>如何设计一个精壮的服务</title>
