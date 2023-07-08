@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>基于本地知识库的问答系统</title>
+      <link href="/2023/07/08/ji-yu-ben-di-zhi-shi-ku-de-wen-da-xi-tong/"/>
+      <url>/2023/07/08/ji-yu-ben-di-zhi-shi-ku-de-wen-da-xi-tong/</url>
+      
+        <content type="html"><![CDATA[<h1 id="基于本地知识库的问答系统"><a href="#基于本地知识库的问答系统" class="headerlink" title="基于本地知识库的问答系统"></a>基于本地知识库的问答系统</h1><p>LangChain+ chatGLM 实现基于本地知识库的问答系统</p><p><img src="https://bard-note.oss-cn-hangzhou.aliyuncs.com/img/1688304770233-43f816d4-0079-49e8-8977-0024d517cdea.png" alt="image.png"></p><p><a href="https://github.com/colania/langchain-ChatGLM">https://github.com/colania/langchain-ChatGLM</a></p><p>配合 LangChain入门</p><p><a href="https://github.com/liaokongVFX/LangChain-Chinese-Getting-Started-Guide">https://github.com/liaokongVFX/LangChain-Chinese-Getting-Started-Guide</a></p><p><a href="https://colab.research.google.com/drive/1ArRVMiS-YkhUlobHrU6BeS8fF57UeaPQ?usp=sharing#scrollTo=NQFxSP3rJlHF">https://colab.research.google.com/drive/1ArRVMiS-YkhUlobHrU6BeS8fF57UeaPQ?usp=sharing#scrollTo=NQFxSP3rJlHF</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 机器学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 大模型 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>面试总结</title>
       <link href="/2023/07/08/mian-shi-zong-jie/"/>
       <url>/2023/07/08/mian-shi-zong-jie/</url>
